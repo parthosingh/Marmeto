@@ -1,0 +1,43 @@
+.Parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.subParent {
+    padding-top: 10px;
+}
+
+.subParent ~ div {
+    padding-top: 20px;
+}
+
+ .grandParent {
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+    background-size: cover;
+} 
+.grandParent >img{
+    background-color: #E1DDD8;
+    background-position: center;
+}
+
+ @media all and (min-width: 300px) and (max-width: 550px) {
+    .Parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+  } 
+
+  @media (max-width: 1526px) {
+    .grandParent {
+        margin-left: 5%; 
+    }
+    
+    .grandParent > img {
+        max-width: 90%; 
+    }
+}
